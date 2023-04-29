@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/*--colors to use
+Navy Blue-rgb(0,0,128)
+Blue Grotto-rgb(4,118,208)
+Blue Green-rgb(13,152,186)
+Baby Blue-rgb(137,207,240)
+use white for text
+
+/*-----HTML----*/
+
+html{
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*-----nav-----*/
+
+.main_nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(0,0,128);
+    padding: .3em;
+    margin: 0px;
+    overflow: auto;
+}
+
+.main_nav a {
+    width: 100px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px 15x;
+    text-align: center;
+}
+
+.main_nav a:hover {
+    background-color:rgb(13,152,186);
+    color: rgb(57, 49, 94);
+}
+
+li.logo{
+    margin-left: auto;
+}
+
+.logo img{
+    position: right;
+   
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 15px;
+    list-style: none;
+}
+
+
+
+
+
+
+/*----hero_image----*/
+
+.hero_image {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.4),
+    rgba(0,0,0,0.4)), url(images/hero_image.jpg);
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative; 
+    border-radius: 0%;
+    max-width: 7500px;
+}
+
+/*--body-&-text---*/
+
+body {
+    margin: 0;
+    background-color: rgb(137,207,240);
+}
+
+h1,h2,h3,h4 {
+    font-style: oblique;
+    color: black;
+    margin: 5px;
+}
+
+p{
+    font-style: normal;
+    font-size: large;
+    color: black;
+    margin: 5px;
+}
+
+a {
+    margin: 5px;
+}
+
+
+
+/*----Index Grid----*/
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    'profile profile i1 i1'
+    'words words i2 i2'
+    'i3 i3 i3 i3';
+    background-color: rgb(137,207,240);
+    padding: 10px;
+    margin: 5px;
+}
+
+#profile {
+    grid-area: profile;
+    object-fit: cover;
+}
+
+#words {
+    grid-area: words;
+    object-fit: cover;
+    
+}
+
+#i1 {
+    grid-area: i1;
+    object-fit: cover;
+    
+}
+
+#i2 {
+    grid-area: i2;
+    object-fit: cover;
+}
+
+#i3 {
+    grid-area: i3;
+    object-fit: cover;
+}
+
+/*----skills grid----*/
+
+#skills {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    'ocean ocean nat nat bridge bridge'
+    'mt    mt    rail rail   walk walk'
+    'tree  tree  woods woods city city'
+    'close close close close close close';
+    margin: 10px;
+    padding: auto;
+}
+
+#ocean {
+    grid-area: ocean;
+    object-fit: cover;
+}
+
+#nat {
+    grid-area: nat;
+    object-fit: cover;
+}
+
+#bridge {
+    grid-area: bridge;
+    object-fit: cover;
+}
+
+#mt {
+    grid-area: mt;
+    object-fit: cover;
+}
+
+#rail {
+    grid-area: rail;
+    object-fit: cover;
+}
+
+#walk {
+    grid-area: walk;
+    object-fit: cover;
+}
+
+#tree {
+    grid-area: tree;
+    object-fit: cover;
+}
+
+#woods {
+    grid-area: woods;
+    object-fit: cover;
+}
+
+#city {
+    grid-area: city;
+    object-fit: cover;
+}
+
+#close {
+    grid-area: close;
+    object-fit: cover;
+}
+
+#cp{
+    grid-area: cp;
+    object-fit: cover;
+}
+
+/*----video------*/
+.video {
+    margin: 0px 15px 0px 30px;
+    padding: 60px 0px 60px 0px;
+}
+
+
+/*--adding style to the grid-*/
+
+#profile {
+    margin: 0px 15px 0px 30px;
+    padding: 60px 0px 60px 0px;
+}
+
+#i1, #i2, #i3 {
+    padding: 100px;
+    margin: 5px;
+}
+
+img {
+    max-width: 100%;
+    padding:5px;
+    margin: 5px;
+}
+
+/*---contact---*/
+
+
+ 
+
+
+/*----footer----*/
+
+footer {
+    background-color: rgb(4,118,208);
+    color: white;
+    text-align: left;
+}
+
+/*----media----*/
+@media screen and (max-width: 800px) {
+    #container {
+        display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    'profile profile i1 i1'
+    'words words i2 i2'
+    'i3 i3 i3 i3';
+        justify-content: center;
+        background-color: rgb(137,207,240);
+        margin: 0 auto;
+        max-width: 800px;
+        
+    }
+
+    #skills {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+        'ocean ocean nat nat'
+        'bridge bridge mt mt'
+        'rail rail walk walk'
+        'tree tree woods woods'
+        'city city close close';
+        justify-content: center;
+        justify-items: center;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #i1, #i2, #i3 {
+        width: 400px;
+        padding: 0px;
+    }
+
+    .main_nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        background-color: rgb(0,0,128);
+        padding: .5em;
+        margin: 0;
+    }
+    .main_nav a {
+        color: white;
+        padding: 30px 20px;
+        text-decoration: none;
+    }
+    .main_nav a:hover {
+        background-color: rgb(13,152,186);
+        color: rgb(57, 49, 94);
+    }
+    
+    li.logo {
+        margin-left: auto;
+    }
+    
+    body {
+        background-color: rgb(137,207,240);
+    }
+
+    footer {
+        background-color: rgb(4,118,208);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+    'profile'
+    'profile'
+    'words'
+    'i1'
+    'i1'
+    'i2'
+    'i2'
+    'i3';
+    justify-content: center;
+    background-color: rgb(137,207,240);
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 600px;
+    }
+
+    #skills {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas:
+        'ocean'
+        'nat'
+        'bridge'
+        'mt'
+        'rail'
+        'walk'
+        'tree'
+        'woods'
+        'city'
+        'close';
+        justify-content: center;
+        justify-items: center;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #i1, #i2, #i3 {
+        padding: 0px;
+    }
+
+
+
+    .main_nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        background-color: rgb(0,0,128);
+        padding: 0em;
+        margin: 0;
+    }
+    .main_nav a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+    .main_nav a:hover {
+        background-color:rgb(13,152,186);
+        color:  rgb(57, 49, 94);
+    }
+    
+    li.logo {
+        margin-left: auto;
+    }
+    
+    .hero_image {
+    background-image: linear-gradient(rgb(0, 0, 0, 0.4),
+    rgba(0,0,0,0.4)), url(images/hero_image.jpg);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative; 
+    border-radius: 0%;
+    }
+
+    body {
+        background-color:  rgb(137,207,240);
+    }
+
+    h1,h2,h3,h4 {
+        color: black;
+    }
+
+    p {
+        color: black;
+    }
+    
+    
+    footer {
+        background-color:  rgb(4,118,208);
+        color:white;
+    }
+
+
+}
+
+/* FLEX ART WORK */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li.logo {
+    margin-left: auto;
+}
+
+
+.flex h1 {
+    margin: 5px;
+}
+
+.flex p {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+.flex img {
+    width: 500px;
+    height: 400px;
+    margin: 5px;
+}
+ 
